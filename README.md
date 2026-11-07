@@ -4,10 +4,14 @@
 
 ProofForge maps a repository, teaches the developer how it works, and verifies security repairs with deterministic evidence. The AI mentor explains. The evidence pipeline proves.
 
+## Public deployment
+
+**Open the live prototype:** https://pravinraj2906-byte.github.io/VibeStudy/
+
+The deployment is publicly accessible and requires no account. Select **Open judge prototype** on the landing page to enter the complete guided demo.
+
 **Hackathon:** INFINEX 2K26  
-**Repository:** `https://github.com/pravinraj2906-byte/VibeStudy`  
-**Live demo:** https://pravinraj2906-byte.github.io/VibeStudy/  
-**Judge prototype:** open the demo and select **Open judge prototype** (runs without an account)
+**Repository:** https://github.com/pravinraj2906-byte/VibeStudy
 
 This repository contains the complete frontend, backend, database migrations, educational fixtures, tests, and project documentation. Private credentials, installed dependencies, generated builds, and user workspaces are intentionally excluded.
 
