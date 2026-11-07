@@ -58,7 +58,7 @@ const IndexRoute: React.FC = () => {
 export const App: React.FC = () => {
   return (
     <AuthProvider>
-      <BrowserRouter>
+      <BrowserRouter basename={import.meta.env.BASE_URL}>
         <Routes>
           <Route path="/" element={<IndexRoute />} />
           <Route path="/landing" element={<LandingPage />} />
