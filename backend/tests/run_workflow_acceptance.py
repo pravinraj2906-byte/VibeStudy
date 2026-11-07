@@ -36,9 +36,9 @@ def run_workflow_test():
     print("Profile verification:", r_me.json())
 
     print("\n=== STEP 3: REPOSITORY IMPORT & INTELLIGENCE ===")
-    # Controlled repo: Praveensagar07/VibeStudy
+    # Controlled repo: pravinraj2906-byte/VibeStudy
     import_payload = {
-        "repo_url": "https://github.com/Praveensagar07/VibeStudy",
+        "repo_url": "https://github.com/pravinraj2906-byte/VibeStudy",
         "branch": "main"
     }
     print(f"Importing repository {import_payload['repo_url']}...")

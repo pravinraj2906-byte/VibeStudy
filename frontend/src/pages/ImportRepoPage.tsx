@@ -117,10 +117,10 @@ export const ImportRepoPage: React.FC = () => {
               <div className="flex flex-wrap gap-2">
                 <button
                   type="button"
-                  onClick={() => setPreset('https://github.com/Praveensagar07/VibeStudy', 'main')}
+                  onClick={() => setPreset('https://github.com/pravinraj2906-byte/VibeStudy', 'main')}
                   className="px-2.5 py-1 bg-canvas-elevated hover:bg-canvas-elevated/80 border border-border-subtle hover:border-blue-500/40 rounded-lg text-[11px] text-blue-700 font-mono transition"
                 >
-                  Praveensagar07/VibeStudy
+                  pravinraj2906-byte/VibeStudy
                 </button>
               </div>
             </div>

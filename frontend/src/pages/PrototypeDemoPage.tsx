@@ -8,7 +8,7 @@ const prototypeProject: Project = {
   id: 1,
   user_id: 1,
   name: 'ProofForge AI',
-  repo_url: 'https://github.com/Praveensagar07/VibeStudy',
+  repo_url: 'https://github.com/pravinraj2906-byte/VibeStudy',
   default_branch: 'main',
   commit_sha: 'benchmark-verified',
   framework: 'React + FastAPI',

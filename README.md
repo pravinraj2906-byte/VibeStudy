@@ -5,7 +5,7 @@
 ProofForge maps a repository, teaches the developer how it works, and verifies security repairs with deterministic evidence. The AI mentor explains. The evidence pipeline proves.
 
 **Hackathon:** INFINEX 2K26  
-**Repository:** `https://github.com/Praveensagar07/VibeStudy`  
+**Repository:** `https://github.com/pravinraj2906-byte/VibeStudy`  
 **Judge prototype:** `/prototype` (runs without an account)
 
 This repository contains the complete frontend, backend, database migrations, educational fixtures, tests, and project documentation. Private credentials, installed dependencies, generated builds, and user workspaces are intentionally excluded.
@@ -84,7 +84,7 @@ Use Python 3.12 and Node.js 20, matching the Docker build configuration, plus a 
 ### 1. Clone the repository
 
 ```powershell
-git clone https://github.com/Praveensagar07/VibeStudy.git
+git clone https://github.com/pravinraj2906-byte/VibeStudy.git
 cd VibeStudy
 ```
 

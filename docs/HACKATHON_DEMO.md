@@ -2,7 +2,7 @@
 ## "From Vibe Coding to Real Engineering"
 
 **Project:** ProofForge AI  
-**Repository:** https://github.com/Praveensagar07/VibeStudy  
+**Repository:** https://github.com/pravinraj2906-byte/VibeStudy  
 **Database:** Neon Serverless PostgreSQL (`neondb`, production branch)  
 **AI Engine:** Google Gemini API (`gemini-3.5-flash-lite`, `gemini-3.5-flash`, `gemini-3.8-flash`)  
 **Execution Runtime:** Docker Sandbox with WSL 2 Engine  

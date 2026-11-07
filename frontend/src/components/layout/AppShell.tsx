@@ -291,7 +291,7 @@ export const AppShell: React.FC<{ children: React.ReactNode }> = ({ children }) 
             />
 
             <a
-              href="https://github.com/Praveensagar07/VibeStudy"
+              href="https://github.com/pravinraj2906-byte/VibeStudy"
               target="_blank"
               rel="noreferrer"
               className="hidden lg:flex items-center space-x-1.5 px-2.5 py-1 bg-canvas-elevated hover:bg-canvas-elevated/80 border border-border-subtle text-xs text-text-secondary hover:text-text-primary rounded-lg transition font-mono"

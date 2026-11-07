@@ -3,7 +3,7 @@
 ## ADR 001: Workspace Initialization and Version Control Setup
 - **Date:** 2026-10-31
 - **Status:** Accepted
-- **Context:** The hackathon repository is published as `https://github.com/Praveensagar07/VibeStudy` while the product remains branded ProofForge AI.
+- **Context:** The hackathon repository is published as `https://github.com/pravinraj2906-byte/VibeStudy` while the product remains branded ProofForge AI.
 - **Decision:** Initialized git, connected origin remote, synchronized `main` tracking branch, configured comprehensive `.gitignore` preventing secrets and virtual environments from tracking.
 - **Consequences:** Ensures clean version control and secret hygiene across frontend and backend.
 

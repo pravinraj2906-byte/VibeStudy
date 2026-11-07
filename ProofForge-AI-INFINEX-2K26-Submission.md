@@ -14,7 +14,7 @@ React 19, TypeScript, Vite, Tailwind CSS, Three.js and React Three Fiber power t
 
 ## GitHub repository
 
-https://github.com/Praveensagar07/VibeStudy
+https://github.com/pravinraj2906-byte/VibeStudy
 
 ## Working demo
 
