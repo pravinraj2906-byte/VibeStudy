@@ -18,7 +18,9 @@ https://github.com/pravinraj2906-byte/VibeStudy
 
 ## Working demo
 
-Pending clean deployment. The account-free judge route is `/prototype`.
+https://pravinraj2906-byte.github.io/VibeStudy/
+
+Open the landing page and select **Open judge prototype**. The judge experience runs without an account.
 
 ## Presentation
 

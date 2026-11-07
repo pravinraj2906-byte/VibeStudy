@@ -6,7 +6,8 @@ ProofForge maps a repository, teaches the developer how it works, and verifies s
 
 **Hackathon:** INFINEX 2K26  
 **Repository:** `https://github.com/pravinraj2906-byte/VibeStudy`  
-**Judge prototype:** `/prototype` (runs without an account)
+**Live demo:** https://pravinraj2906-byte.github.io/VibeStudy/  
+**Judge prototype:** open the demo and select **Open judge prototype** (runs without an account)
 
 This repository contains the complete frontend, backend, database migrations, educational fixtures, tests, and project documentation. Private credentials, installed dependencies, generated builds, and user workspaces are intentionally excluded.
 
@@ -146,7 +147,7 @@ Only Firebase web-app configuration belongs in `VITE_FIREBASE_*`. Never put Fire
 
 ## Hosted deployment and limits
 
-The frontend can be deployed as a Vite single-page app and the backend as a FastAPI service with PostgreSQL. Deployment links will be added after the clean hackathon repository is published.
+The public judge demo is deployed through GitHub Pages from the tested `frontend/` build. The complete authenticated product also supports a FastAPI service with PostgreSQL when the backend environment is configured.
 
 - **Code execution is disabled.** Reproduction, repair verification, and challenge grading require a separately isolated worker. The public API returns 503 for these execution actions, and the UI disables their controls.
 - **Google sign-in is not configured in the demo.** Use email/password.

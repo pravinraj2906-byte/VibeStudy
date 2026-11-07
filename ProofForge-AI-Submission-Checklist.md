@@ -5,8 +5,8 @@ Live requirements confirmed from the Unstop stage page on 7 November 2026.
 - [x] Project title and problem statement prepared
 - [x] Solution description and key features prepared
 - [x] Technology stack prepared
-- [ ] Public GitHub repository created and verified
-- [ ] Working demo deployed and verified
+- [x] Public GitHub repository created and verified
+- [x] Working demo deployed and verified
 - [ ] Final PowerPoint uploaded
 - [ ] All form fields reviewed before submission
 
