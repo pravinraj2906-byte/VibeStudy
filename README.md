@@ -4,12 +4,6 @@
 
 Vibe Study maps a repository, teaches the developer how it works, and verifies security repairs with deterministic evidence. The AI mentor explains. The evidence pipeline proves.
 
-## Public deployment
-
-**Open the live prototype:** https://pravinraj2906-byte.github.io/VibeStudy/
-
-The deployment is publicly accessible and requires no account. Select **Open judge prototype** on the landing page to enter the complete guided demo.
-
 **Hackathon:** INFINEX 2K26  
 **Repository:** https://github.com/pravinraj2906-byte/VibeStudy
 
