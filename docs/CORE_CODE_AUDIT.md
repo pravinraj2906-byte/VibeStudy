@@ -2,7 +2,7 @@
 **Document Reference:** `docs/CORE_CODE_AUDIT.md`  
 **Audit Type:** Independent Senior Software Architect, Security Engineer & Code Reviewer Audit  
 **Date:** November 2, 2026  
-**Repository:** `https://github.com/Praveensagar07/ProofForge-AI`  
+**Repository:** `https://github.com/Praveensagar07/VibeStudy`  
 **Workspace:** `C:\Projects\ProofForge-AI`  
 **Target Application:** `http://127.0.0.1:5173` (Vite Dev Server) | `http://127.0.0.1:8000` (FastAPI)  
 **Target Workflow:** `/projects/135/repair` (Guided Repair Studio)  

@@ -5,7 +5,7 @@
 ProofForge maps a repository, teaches the developer how it works, and verifies security repairs with deterministic evidence. The AI mentor explains. The evidence pipeline proves.
 
 **Hackathon:** INFINEX 2K26  
-**Repository:** `https://github.com/Praveensagar07/ProofForge-AI`  
+**Repository:** `https://github.com/Praveensagar07/VibeStudy`  
 **Judge prototype:** `/prototype` (runs without an account)
 
 This repository contains the complete frontend, backend, database migrations, educational fixtures, tests, and project documentation. Private credentials, installed dependencies, generated builds, and user workspaces are intentionally excluded.
@@ -54,7 +54,7 @@ Apply `a7b8c9d0e1f2_add_personal_mentor_memory.py` through the normal `alembic u
 ## Repository structure
 
 ```text
-ProofForge-AI/
+VibeStudy/
 |-- frontend/
 |   |-- src/              # Pages, components, API client, authentication
 |   |-- public/           # Illustrations and static assets
@@ -84,8 +84,8 @@ Use Python 3.12 and Node.js 20, matching the Docker build configuration, plus a 
 ### 1. Clone the repository
 
 ```powershell
-git clone https://github.com/Praveensagar07/ProofForge-AI.git
-cd ProofForge-AI
+git clone https://github.com/Praveensagar07/VibeStudy.git
+cd VibeStudy
 ```
 
 ### 2. Configure and start the backend

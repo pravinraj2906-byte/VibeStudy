@@ -14,7 +14,7 @@ React 19, TypeScript, Vite, Tailwind CSS, Three.js and React Three Fiber power t
 
 ## GitHub repository
 
-https://github.com/Praveensagar07/ProofForge-AI
+https://github.com/Praveensagar07/VibeStudy
 
 ## Working demo
 
