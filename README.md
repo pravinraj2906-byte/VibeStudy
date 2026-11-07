@@ -1,8 +1,8 @@
-# ProofForge AI
+# Vibe Study
 
 **Evidence-first engineering for AI-built software.**
 
-ProofForge maps a repository, teaches the developer how it works, and verifies security repairs with deterministic evidence. The AI mentor explains. The evidence pipeline proves.
+Vibe Study maps a repository, teaches the developer how it works, and verifies security repairs with deterministic evidence. The AI mentor explains. The evidence pipeline proves.
 
 ## Public deployment
 
