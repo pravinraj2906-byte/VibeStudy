@@ -173,3 +173,62 @@ For production, use `APP_ENV=production`, a unique strong `SECRET_KEY`, and `COR
 ## Secrets and educational fixtures
 
 Copy only example environment files. Real `.env` files and common credential-file names are ignored by Git. Review staged changes before pushing. Fixtures intentionally contain vulnerable code and synthetic secret examples for scanner testing; never run untrusted repository code in the web process.
+
+## AI model, evaluation, monitoring, and code-teaching methodology
+
+### What the AI model does (and does not do)
+
+ProofForge uses **Google Gemini** as a source-grounded teaching assistant, not as a security verdict engine. Its role is to help learners understand their own application's architecture, code paths, dependencies, design choices, and potential fixes. The repository does **not** establish a measured Gemini accuracy rate, a custom-trained model, or a model-specific benchmark score. Model name/version and runtime configuration depend on the deployed environment; do not infer them from the scanner metrics below.
+
+The product separates three kinds of output:
+
+| Output | Source | Interpretation |
+|---|---|---|
+| Repository structure, source excerpts, and dependency information | Imported project and analysis pipeline | Inspectable repository facts, subject to parser/import limitations |
+| Explanations, guided questions, and repair suggestions | Gemini with repository context | Educational guidance; may be incomplete or incorrect and must be checked |
+| Static-analysis findings, test outcomes, and evidence score | Deterministic scanners, tests, and documented heuristics | Reproducible signals within their stated scope; not proof of complete security |
+
+The **Repository Evidence Score** is a transparent 100-point heuristic covering architecture visibility, security posture, delivery readiness, and explainability. Its deductions should be inspected individually; it is neither model confidence nor a guarantee of production readiness.
+
+### How learners understand the real code behind their app
+
+The intended learning loop is **Explore → Explain → Repair → Verify → Transfer**:
+
+1. **Explore:** Import a repository and inspect the actual directory structure, files, dependency relationships, and available architecture/data-flow views. Start from real source code, not a generic explanation.
+2. **Explain:** Ask the mentor why a function, API route, database model, authentication boundary, or dependency exists. Relate explanations to the imported project and inspect the corresponding source; distinguish observed facts from interpretation.
+3. **Repair:** Review a specific scanner finding and its affected code. Use progressive hints to reason about root cause, trust boundaries, and minimal changes before writing a patch.
+4. **Verify:** Compare the proposed change against deterministic scanner output and tests where execution infrastructure is available. A suggested fix alone is not a verified fix.
+5. **Transfer:** Attempt a fresh, related challenge and explain the reasoning without simply copying the mentor's answer. This checks whether knowledge can be applied beyond the original example.
+
+The mentor can use a learner's project-scoped goals and prior concepts to adapt its teaching style (guided, concise, or deep-dive). Account-synced memory requires the configured backend and database; browser fallback is temporary when the API is unavailable.
+
+### What accuracy is actually measured
+
+The currently documented benchmark evaluates the **built-in AST and heuristic security scanner**, **not Gemini**. It contains 10 labeled fixtures spanning IDOR, synthetic secrets, XSS, vulnerable dependencies, and unsafe CORS: **TP = 5, TN = 5, FP = 0, FN = 0**.
+
+| Scanner metric | Calculation | Fixture result |
+|---|---|---|
+| Precision | TP / (TP + FP) | 5 / 5 = **100%** |
+| Recall | TP / (TP + FN) | 5 / 5 = **100%** |
+| Accuracy | (TP + TN) / all fixtures | 10 / 10 = **100%** |
+| False-positive rate | FP / (FP + TN) | 0 / 5 = **0%** |
+
+Reproduce the documented benchmark from `backend/` with `python -m pytest tests/test_benchmark_metrics.py -q`. These fixture-level results are **not** evidence of 100% detection on unseen repositories, zero false alarms in production, or 100% AI teaching accuracy. The repository README records the historical result; rerun tests against the specific commit/environment before reporting a new measurement.
+
+### How to evaluate AI teaching quality
+
+The following is a **proposed evaluation protocol**, not a claim that the full evaluation has already been run:
+
+1. Assemble a versioned test set of real or synthetic repositories with known architecture, code paths, intentional bugs, and reference explanations. Separate evaluation repositories from development examples.
+2. Ask a fixed set of tasks: locate a relevant file/function, trace an API request through the stack, explain a security issue, propose a minimal repair, and teach a concept with a follow-up question.
+3. Score **source grounding** (whether cited files and lines exist and support the claim), **technical correctness** (expert review against code/tests), **repair validity** (tests and scanner outcomes), **teaching clarity** (rubric-based human review), and **skill transfer** (independent follow-up task performance).
+4. Record unsupported claims, hallucinated paths, unsafe advice, and failures to distinguish a suggestion from verified evidence. Report each metric with sample size, rubric, model/configuration, and test-set version.
+5. Compare changes against a fixed baseline before release. Do not turn qualitative mentor feedback into an unsupported single “AI accuracy” percentage.
+
+For code-location tasks, an example measurable indicator is **grounded-reference rate = supported file/line references ÷ all file/line references checked**. For repair tasks, report the fraction of attempted fixes passing the specified tests, with the number of attempted tasks. These are evaluation definitions, **not measured results**.
+
+### How to monitor quality and safety
+
+A production monitoring plan should track: model/provider availability and latency; API failures; unsupported or invalid source references; scanner finding counts and severity; test pass/fail rates; repair attempts and verification outcomes; learner feedback; and independent transfer-task results. Segment metrics by application version, model configuration, repository type, and evaluation set to detect regressions. Avoid collecting raw secrets or unnecessary personal code in telemetry; enforce per-user/project isolation and redact sensitive data in logs.
+
+When Gemini is unavailable, repository facts and deterministic analysis should remain available and AI-dependent explanations should be labeled unavailable. When the isolated execution worker is absent, code execution and repair verification must remain disabled rather than reporting success. The **public GitHub Pages judge prototype** demonstrates the workflow but does **not** provide hosted code execution or verified live repair runs. The current README does not establish that all proposed monitoring dashboards, alerts, and AI evaluation jobs are deployed; these are planned operational controls.
