@@ -1,0 +1,117 @@
+@import "./editorial.css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  body {
+    background-color: #f7f8f3;
+    color: #20352f;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;
+    font-feature-settings: "zero", "cv02", "cv03", "cv04", "cv11";
+  }
+
+  /* Accessible focus indicators */
+  *:focus-visible {
+    outline: 2px solid rgba(59, 130, 246, 0.6);
+    outline-offset: 2px;
+  }
+}
+
+@layer components {
+  /* Minimalist Premium Surfaces */
+  .surface-card {
+    background-color: #ffffff;
+    border: 1px solid rgba(32, 53, 47, 0.12);
+    border-radius: 0.75rem;
+    transition: border-color 0.15s ease, background-color 0.15s ease;
+  }
+
+  .surface-card:hover {
+    border-color: rgba(32, 53, 47, 0.2);
+  }
+
+  .surface-elevated {
+    background-color: #eef2ea;
+    border: 1px solid rgba(32, 53, 47, 0.14);
+    border-radius: 0.75rem;
+  }
+
+  /* Backwards-compatibility aliases for terminal-panel */
+  .terminal-panel {
+    background-color: #ffffff;
+    border: 1px solid rgba(32, 53, 47, 0.12);
+    border-radius: 0.75rem;
+  }
+
+  .terminal-panel-elevated {
+    background-color: #eef2ea;
+    border: 1px solid rgba(32, 53, 47, 0.14);
+    border-radius: 0.75rem;
+  }
+
+  /* Subtle background grid pattern for technical depth without visual noise */
+  .pattern-subtle-grid {
+    background-size: 32px 32px;
+    background-image: 
+      linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  }
+
+  .pattern-subtle-dots {
+    background-size: 24px 24px;
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  }
+}
+
+/* Minimalist scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f7f8f3;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d5dfd4;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3B82F6;
+}
+
+/* Reduced Motion Mode Support */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@layer base {
+  input, textarea, select { color: #20352f; }
+  ::selection { background: #d2e5d8; color: #20352f; }
+  button, a, input, select, textarea { -webkit-tap-highlight-color: transparent; }
+}
+@layer components {
+  .surface-card, .terminal-panel { box-shadow: 0 3px 16px #20352f05; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .sculpture-stack, .chapter-art, .paper-code, .transfer-rings { transform: none !important; }
+}

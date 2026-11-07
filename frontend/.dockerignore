@@ -1,0 +1,13 @@
+# Secrets and local state must never enter container build contexts.
+.env
+.env.*
+!.env.example
+!.env.firebase.example
+**/*service-account*.json
+**/*service_account*.json
+**/*credentials*.json
+.git
+*.log
+node_modules
+dist
+*.tsbuildinfo
